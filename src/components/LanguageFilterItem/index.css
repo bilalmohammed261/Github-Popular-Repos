@@ -1,0 +1,23 @@
+/* Write your CSS here */
+.btn {
+  background: transparent;
+  border: none;
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #1e293b;
+  font-weight: 500;
+  height: 30px;
+  width: 60px;
+}
+
+.active {
+  border: solid #0284c7 2px;
+  border-radius: 15px;
+  color: #0284c7;
+}
+
+.language-item {
+  width: 100px;
+  padding: 10px;
+  margin: 0 10px;
+}
