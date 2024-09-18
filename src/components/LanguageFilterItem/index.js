@@ -1,18 +1,22 @@
-// Write your code here
 import './index.css'
 
 const LanguageFilterItem = props => {
-  const {eachLanguageData, onChangeLanguageFilter, isActive} = props
-  const {id, language} = eachLanguageData
-  const btnClass = isActive ? 'active btn' : 'btn'
-
-  const onClickTabItem = () => {
-    onChangeLanguageFilter(id)
+  const {isActive, languageFilterDetails, setActiveLanguageFilterId} = props
+  const {id, language} = languageFilterDetails
+  const btnClassName = isActive
+    ? 'language-btn active-language-btn'
+    : 'language-btn'
+  const onClickLanguageFilter = () => {
+    setActiveLanguageFilterId(id)
   }
 
   return (
-    <li className="language-item">
-      <button className={btnClass} type="button" onClick={onClickTabItem}>
+    <li>
+      <button
+        className={btnClassName}
+        onClick={onClickLanguageFilter}
+        type="button"
+      >
         {language}
       </button>
     </li>
